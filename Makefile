@@ -10,7 +10,7 @@ down:
 
 # コンテナ操作
 next:
-	docker exec -it next /bin/sh
+	docker exec -it next bash
 
 # yarn
 yarn-ci:
