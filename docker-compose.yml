@@ -5,7 +5,7 @@ services:
     container_name: next
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./client/.docker/node/Dockerfile
     volumes:
       - ./client:/user/src/app
     working_dir: /user/src/app
