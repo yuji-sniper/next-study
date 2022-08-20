@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  next:
+    container_name: next
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./client:/user/src/app
+    working_dir: /user/src/app
+    command: sh -c "yarn dev"
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
