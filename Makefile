@@ -12,10 +12,6 @@ down:
 next:
 	docker exec -it next /bin/sh
 
-# Next
-next-install:
-	docker compose run --rm next sh -c "yarn global add create-next-app && yarn create next-app . --typescript"
-
 # yarn
 yarn-ci:
 	docker compose run --rm next yarn install --immutable --immutable-cache --check-cache
