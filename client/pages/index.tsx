@@ -1,6 +1,7 @@
+import Head from "next/head"
 import Link from "next/link"
 import React from "react"
-import Layout from "../components/Layout"
+import Layout, { siteTitle } from "../components/Layout"
 import { getPostsData } from "../lib/post"
 import styles from "../styles/Home.module.css"
 import utilStyles from "../styles/utils.module.css"
@@ -32,9 +33,11 @@ export const getStaticProps = async () => {
 
 const Home = (props: Props) => {
   return (
-    <Layout>
+    <Layout home>
       <div>
-
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
         <section className={utilStyles.headingMd}>
           <p>ナオトくんが書いたブログです</p>
         </section>
